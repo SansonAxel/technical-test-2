@@ -26,7 +26,7 @@
 
 * Lors de la création d'un projet, la popup dit que le projet a été créé mais il n'apparait pas dans la liste [ok]
 * Forcer le refresh de la page pour voir le projet créé [ok]
-* Bug lors que l'on clique sur un projet
+* Bug lors que l'on clique sur un projet [ok]
 
 ## Page des activités :
 

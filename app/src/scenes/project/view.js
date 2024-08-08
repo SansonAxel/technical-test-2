@@ -60,7 +60,7 @@ export default function ProjectView() {
 }
 
 const ProjectDetails = ({ project }) => {
-  console.log(project);
+  // console.log(project);
   return (
     <div>
       <div className="flex flex-wrap p-3">
@@ -70,7 +70,7 @@ const ProjectDetails = ({ project }) => {
               <div className="flex justify-between gap-2">
                 <div className="flex gap-20">
                   <span className="w-fit text-[20px] text-[#0C1024] font-bold">Nom du projet : </span>
-                  <span className="w-fit text-[20px] text-[#0C1024] font-bold">{project.name.toString()}</span>
+                  <span className="w-fit text-[20px] text-[#0C1024] font-bold">{project[0].name?.toString() ?? ""}</span>
                 </div>
                 <div className="flex flex-1 flex-column items-end gap-3">
                   <Links project={project} />
@@ -84,7 +84,7 @@ const ProjectDetails = ({ project }) => {
                   {`Objective :`} <span className="text-[#676D7C] text-[16px] font-medium">{project.objective ? project.objective : ""}</span>
                 </div>
                 <div className="mt-2 mr-2">
-                  <span className="text-[18px] font-semibold text-[#000000]">Budget consummed {project.paymentCycle === "MONTHLY" && "this month"}:</span>
+                  <span className="text-[18px] font-semibold text-[#000000]">Budget consumed {project.paymentCycle === "MONTHLY" && "this month"}:</span>
 
                   <Budget project={project} />
                 </div>
