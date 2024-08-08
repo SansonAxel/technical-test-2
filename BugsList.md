@@ -19,13 +19,13 @@
 
 ## Page des utilisateurs :
 
-* Le nom des utilisateurs ne s'affiche pas sauf pour le premier utilisateur
-* Le champ recherche ne fonctionne pas
+* Le nom des utilisateurs ne s'affiche pas sauf pour le premier utilisateur [ok]
+* Le champ recherche ne fonctionne pas [ok]
 
 ## Page des projets :
 
-* Lors de la création d'un projet, la popup dit que le projet a été créé mais il n'apparait pas dans la liste
-* Forcer le refresh de la page pour voir le projet créé
+* Lors de la création d'un projet, la popup dit que le projet a été créé mais il n'apparait pas dans la liste [ok]
+* Forcer le refresh de la page pour voir le projet créé [ok]
 * Bug lors que l'on clique sur un projet
 
 ## Page des activités :

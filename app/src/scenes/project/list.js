@@ -19,7 +19,7 @@ const ProjectList = () => {
       const { data: u } = await api.get("/project");
       setProjects(u);
     })();
-  }, []);
+  }, [activeProjects]);
 
   useEffect(() => {
     const p = (projects || []).filter((p) => p.status === "active");
@@ -32,6 +32,9 @@ const ProjectList = () => {
     const p = (projects || []).filter((p) => p.status === "active").filter((e) => e.name.toLowerCase().includes(searchedValue.toLowerCase()));
     setActiveProjects(p);
   };
+
+  //console.log("activeProjects : ", activeProjects);
+  //console.log("projects : ", projects);
 
   return (
     <div className="w-full p-2 md:!px-8">
