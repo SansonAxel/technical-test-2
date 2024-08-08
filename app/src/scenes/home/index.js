@@ -10,7 +10,7 @@ const Home = () => {
   }
   useEffect(() => {
     getUser();
-  }, []);
+  }, [availableUsers]);
 
   return (
     <div className="px-2 md:!px-8 flex flex-col md:flex-row gap-5 mt-5">
