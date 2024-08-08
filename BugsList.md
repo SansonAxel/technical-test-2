@@ -7,10 +7,10 @@
 
 ## Création de compte utilisateur :
 
-* Possibilité de créer un compte sans remplir les champs
-* Pas de vérification de l'email
-* Pas de vérification du mot de passe
-* Pas de vérification du nom d'utilisateur
+* Possibilité de créer un compte sans remplir les champs [ok]
+* Pas de vérification de l'email [ok]
+* Pas de vérification du mot de passe [ok]
+* Pas de vérification du nom d'utilisateur [ok]
 
 ## Editer un compte utilisateur :
 

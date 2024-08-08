@@ -36,6 +36,11 @@ const NewList = () => {
     );
   }, [users, filter]);
 
+
+  //console.log("users :", users);
+  //console.log("projects :", projects);
+  //console.log("usersFiltered :", usersFiltered);
+
   if (!usersFiltered) return <Loader />;
 
   return (
@@ -105,12 +110,40 @@ const Create = () => {
               e.stopPropagation();
             }}>
             <Formik
-              initialValues={{}}
+              initialValues={{ name: "", email: "", password: "" }}
               onSubmit={async (values, { setSubmitting }) => {
                 try {
                   values.status = "active";
                   values.availability = "not available";
                   values.role = "ADMIN";
+
+                  const errors = {};
+
+                    if (!values.name) {
+                        errors.name = "Required";
+                    } else if (values.name.length < 3) {
+                        errors.name = "Must be 3 characters or more";
+                    }
+
+                    if (!values.email) {
+                        errors.email = "Required";
+                    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                        errors.email = "Invalid email address";
+                    }
+
+                    if (!values.password) {
+                        errors.password = "Required";
+                    } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/i.test(values.password)) {
+                      errors.password =
+                      "Password must contain at least 12 characters, including at least one uppercase letter, one lowercase letter, one number and one special character";
+                    }
+
+                    if (Object.keys(errors).length > 0) {
+                      console.log(errors);
+                      setSubmitting(false);
+                      return;
+                    }
+
                   const res = await api.post("/user", values);
                   if (!res.ok) throw res;
                   toast.success("Created!");
@@ -128,7 +161,7 @@ const Create = () => {
                     <div className="flex justify-between flex-wrap">
                       <div className="w-full md:w-[48%] mt-2">
                         <div className="text-[14px] text-[#212325] font-medium	">Name</div>
-                        <input className="projectsInput text-[14px] font-normal text-[#212325] rounded-[10px]" name="username" value={values.username} onChange={handleChange} />
+                        <input className="projectsInput text-[14px] font-normal text-[#212325] rounded-[10px]" name="name" value={values.name} onChange={handleChange} />
                       </div>
                       <div className="w-full md:w-[48%] mt-2">
                         <div className="text-[14px] text-[#212325] font-medium	">Email</div>
