@@ -14,8 +14,8 @@
 
 ## Editer un compte utilisateur :
 
-* Le champs name ne s'affiche pas
-* Le bouton update ne fonctionne pas
+* Le champs name ne s'affiche pas [ok]
+* Le bouton update ne fonctionne pas [ok]
 
 ## Page des utilisateurs :
 
@@ -38,15 +38,16 @@
 ## Page des activités :
 
 * La suppression d'une activité ne fonctionne pas
+* La recherche bug sur All Projects (Cannot read properties of undefined (reading 'name'))
 
 ## Home :
 
-* Lors d'un changement de statut il faut refresh la page pour voir le changement
+* Lors d'un changement de statut il faut refresh la page pour voir le changement [ok]
 
 ## Account :
 
-* Le champ email n'affiche pas sa valeur
-* La sauvegarde des modifications ne fonctionne pas (popup de confirmation mais rien ne se passe)
+* Le champ email n'affiche pas sa valeur [ok]
+* La sauvegarde des modifications ne fonctionne pas (popup de confirmation mais rien ne se passe) [ok]
 
 # Sign in :
 
