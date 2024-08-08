@@ -45,12 +45,12 @@ export default function EditProject() {
             </button>
           </div>
           <Formik
-            initialValues={project}
+            initialValues={project[0]}
             onSubmit={async (values) => {
               try {
-                await api.put(`/project/${project._id}`, values);
-                toast.success(`${project.name} updated!`);
-                history.push(`/project/${project._id}`);
+                await api.put(`/project/${project[0]._id}`, values);
+                toast.success(`${project[0].name} updated!`);
+                history.push(`/project/${project[0]._id}`);
               } catch (e) {
                 console.log(e);
                 toast.error("Some Error!");

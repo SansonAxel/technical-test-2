@@ -28,6 +28,13 @@
 * Forcer le refresh de la page pour voir le projet créé [ok]
 * Bug lors que l'on clique sur un projet [ok]
 
+## Editer un projet :
+
+* Lors de la modification d'un projet, le page reste sur le loader (URL undefined) [ok]
+* Les valeurs des champs ne s'affichent pas [ok]
+* Le bouton update ne fonctionne pas (Undefined update) [ok]
+* Loader infini lors de la modification d'un projet [ok]
+
 ## Page des activités :
 
 * La suppression d'une activité ne fonctionne pas
